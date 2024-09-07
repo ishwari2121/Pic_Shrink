@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and Compression</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Upload and Compress Images</h1>
+
+    <!-- Image Upload Input -->
+    <input type="file" id="upload" multiple>
+    
+    <!-- Compression Quality Input -->
+    <label for="quality">Quality (0.0 - 1.0):</label>
+    <input type="number" id="quality" value="0.8" step="0.1" min="0" max="1">
+    
+    <!-- Maximum Dimension Input -->
+    <label for="max-dimension">Max Dimension (px):</label>
+    <input type="number" id="max-dimension" value="2000" step="1" min="1">
+    
+    <!-- Compression Trigger Button -->
+    <button id="compress-button">Compress Images</button>
+    
+    <!-- Progress Indicator -->
+    <div id="progress">
+        <p>Compressing... Please wait.</p>
+    </div>
+    
+    <!-- Status Message -->
+    <p id="status"></p>
+
+    <script src="compressor.js"></script>
+</body>
+</html>
